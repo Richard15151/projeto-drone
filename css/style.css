@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 :root{
     /* cores */
     --cor-fundo: #080808;
@@ -50,7 +49,7 @@ header{
         font-family: var(--fonte-principal);
         font-size: var(--tamanho-fonte-h1);
         color: var(--cor-branca);
-        margin-left: 20px;
+        margin-left: 2rem;
         font-weight: var(--largura-fonte);
     }
 
@@ -58,18 +57,18 @@ header{
         gap:1rem;
         font-family: var(--fonte-principal);
         font-size: var(--tamanho-fonte-base);
-        margin-right: 20px;
+        margin-right: 2rem;
 
         a{
             display: none;
         }
         button{
             display: inline-block;
-            height: 40px;
-            width: 89px;
+            height: 2.5rem;
+            width: 5.5rem;
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
-            border: 1px;
+            border: 0.5rem;
             color: var(--cor-branca);
             font-family: var(--fonte-principal);
             font-size: var(--tamanho-fonte-base);
@@ -96,7 +95,7 @@ header{
             font-family: var(--fonte-principal);
             font-size: var(--tamanho-fonte-h1);
             color: var(--cor-branca);
-            margin-left: 20px;
+            margin-left: 2rem;
             font-weight: var(--largura-fonte);
         }
 
@@ -104,17 +103,17 @@ header{
             gap:1rem;
             font-family: var(--fonte-principal);
             font-size: var(--tamanho-fonte-base);
-            margin-right: 20px;
+            margin-right: 2rem;
             a{
                 display:inline-block;
                 color: var(--cor-branca);
-                margin: 20px;
+                margin: 1rem;
                 font-weight: var(--largura-fonte);
                 text-decoration: none;
             }
             button{
-                height: 40px;
-                width: 89px;
+                height: 2.5rem;
+                width: 5.5rem;
                 border-radius: 0.5rem;
                 padding: 0.5rem 1rem;
                 border: 1px;
@@ -132,90 +131,643 @@ header{
     }
 }
 
-
-/* COISAS DO HERO */
+/* COISAS DO HERO MOBILE FIRST*/
 .hero {
-    position: relative;
-    height: 435px;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--cor-cinza-escuro);
-
-    .videohero {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-    }
-    .hero-content {
         position: relative;
-        z-index: 1;
-        text-align: center;
-        color: var(--cor-branca);
+        height: 25rem;
+        width: 100%;
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        .titulohero{
-            font-family: var(--fonte-principal);
-            font-size: 78px;
-            font-weight: var(--largura-fonte);
+        justify-content: center;
+
+        .videohero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--cor-branca);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            .titulohero{
+                font-family: var(--fonte-principal);
+                font-size: 48px;
+                font-weight: var(--largura-fonte);
+            }
+            .subtitulohero{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 35rem;
+                font-family: var(--fonte-principal);
+                font-size: 24px;
+            }
+            button{
+                height: 40px;
+                width: 261px;
+                border-radius: 8px;
+                border: none;
+                background-color: var(--cor-primaria);
+                color: var(--cor-branca);
+                font-family: var(--fonte-principal);
+                font-size: var(--tamanho-fonte-base);
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: var(--cor-cinza-escuro);
+            }
         }
     }
-    .hero-content h1 {
+
+/* COISAS DO HERO PARA TELAS MAIORES QUE CELULAR */
+@media (min-width: 768px){
+    .hero {
+        position: relative;
+        height: 25rem;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .videohero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--cor-branca);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            .titulohero{
+                font-family: var(--fonte-principal);
+                font-size: 78px;
+                font-weight: var(--largura-fonte);
+            }
+            .subtitulohero{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 35rem;
+                font-family: var(--fonte-principal);
+                font-size: 36px;
+            }
+        }
+    }
+
+    .hero-content p {
+        font-family: var(--fonte-principal);
+        font-size: 36px;
+    }
+
+    .hero-content button {
+        height: 40px;
+        width: 261px;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--cor-primaria);
+        color: var(--cor-branca);
+        font-family: var(--fonte-principal);
+        font-size: var(--tamanho-fonte-base);
+        cursor: pointer;
+    }
+
+    .hero-content button:hover {
+        background-color: var(--cor-cinza-escuro);
     }
 }
 
-
-
-
-
-.hero-content p {
-    font-family: var(--fonte-principal);
-    font-size: 36px;
-}
-
-.hero-content button {
-    height: 40px;
-    width: 261px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--cor-primaria);
-    color: var(--cor-branca);
-    font-family: var(--fonte-principal);
-    font-size: var(--tamanho-fonte-base);
-    cursor: pointer;
-}
-
-.hero-content button:hover {
-    background-color: var(--cor-cinza-escuro);
-}
-
-/* COISAS DA SECTION BENEFICIOS */
-
+/* COISAS DA SECTION BENEFICIOS MOBILE FIRST*/
 .beneficios{
-    height: 435px;
+        height: 25rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cor-fundo);
+
+        .beneficios-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap:2rem;
+            font-family: var(--fonte-principal);
+            .titulo{
+                text-align: center;
+                width: 30rem;
+                font-size: 1.5rem;
+                font-weight: var(--largura-fonte);
+                color: var(--cor-branca);
+            }
+            .subtitulo{
+                text-align: center;
+                width: 25rem;
+                font-size: 1.2rem;
+                color: var(--cor-branca);
+            }
+            .paragrafo{
+                text-align: center;
+                width: 45rem;
+                font-size: 1rem;
+                color: var(--cor-branca);    
+            }
+            .botoes{
+                display: flex;
+                gap: 2rem;
+                .botaoassistir{
+                    height: 2rem;
+                    width: 8rem;
+                    color: var(--cor-fundo);
+                    border-radius: 1rem;
+                }
+                .botaoreportagem{
+                    height: 2rem;
+                    width: 8rem;
+                    color: var(--cor-branca);
+                    background-color: var(--cor-fundo);
+                    border-radius: 1rem;
+                    border: 1rem 1rem white;
+                
+                }
+            }
+
+        }
+    }
+
+/* COISAS DA SECTION BENEFICIOS PARA TELAS MAIORES QUE CELULAR */
+@media (min-width: 768px){
+    .beneficios{
+        height: 25rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cor-fundo);
+
+        .beneficios-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap:2rem;
+            font-family: var(--fonte-principal);
+            .titulo{
+                text-align: center;
+                width: 45rem;
+                font-size: 32px;
+                font-weight: var(--largura-fonte);
+                color: var(--cor-branca);
+            }
+            .subtitulo{
+                text-align: center;
+                width: 45rem;
+                font-size: 26px;
+                color: var(--cor-branca);
+            }
+            .paragrafo{
+                text-align: center;
+                width: 45rem;
+                font-size: 20px;
+                color: var(--cor-branca);    
+            }
+            .botoes{
+                display: flex;
+                gap: 2rem;
+                .botaoassistir{
+                    height: 30px;
+                    width: 130px;
+                    color: var(--cor-fundo);
+                    border-radius: 1rem;
+                }
+                .botaoreportagem{
+                    height: 30px;
+                    width: 130px;
+                    color: var(--cor-branca);
+                    background-color: var(--cor-fundo);
+                    border-radius: 1rem;
+                    border: 1rem 1rem white;
+                
+                }
+            }
+
+        }
+    }
+}
+
+/* COISAS DA SECTION IMAGEM MOBILE FIRST */
+.imagem {
     width: 100%;
+    height: 15rem;
+    background-image: url(/img/Imagem\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* COISAS DA SECTION DA IMAGEM PARA TELAS MAIORES QUE CELULAR */
+@media (min-width: 768px) {
+    .imagem {
+        height: 25rem;
+    }
+}
+
+/* COISAS DA SECTION ESPECIFICAÇÕES MOBILE FIRST */
+.especificacoes{
+    height:min-content;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    .cards{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.1rem;
+        .card{
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 12.4rem;
+            display: flex;
+            justify-content:center;
+            flex-direction:column;
+            color: var(--cor-branca);
+            background-color: var(--cor-cinza-escuro);
+            font-family: var(--fonte-principal);
+            gap: 0.001rem;
+            .titulo{
+                font-size: 1.5rem;
+                margin-left: 1rem;
+                width: 25rem;
+            }
+            .subtitulo{
+                font-size: 1rem;
+                margin-left: 1rem;
+                width: 25rem;
+            }
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
+    
+    }
+}
+
+/* COISAS DA SECTION ESPECIFICAÇÕES PARA TELAS MAIORES QUE CELULAR */
+@media (min-width: 768px) {
+    .especificacoes{
+        height: 25rem;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        .cards{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.1rem;
+            .card{
+                width: 28rem;
+                height: 12.4rem;
+                display: flex;
+                justify-content:center;
+                flex-direction:column;
+                color: var(--cor-branca);
+                background-color: var(--cor-cinza-escuro);
+                font-family: var(--fonte-principal);
+                gap: 0.001rem;
+                .titulo{
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                    width: 25rem;
+                }
+                .subtitulo{
+                    font-size: 1rem;
+                    margin-left: 1rem;
+                    width: 25rem;
+                }
+            }
+        }
+    }
+}
+
+/* COISAS DA SECTION DEPOIMENTOS MOBILE FIRST */
+.depoimentos {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+    background-image: url(/img/Imagem\ 3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: coral;
+    gap: 4rem;
     color: var(--cor-branca);
-    gap:2rem;
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        backdrop-filter: blur(3px);
+        background-color: rgba(0,0,0,0.3);
+        z-index: 0;
+    }
+    .depoimentofoto {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0.5rem;
+        .depoimento {
+            .titulo {
+                font-family: var(--fonte-principal);
+                font-size: 1.3rem;
+            }
+            .fala {
+                width: 20rem;
+                text-align: start;
+                font-family: var(--fonte-principal);
+                font-size: 1rem;
+            }
+            .nome {
+                font-family: var(--fonte-principal);
+                font-weight: 200;
+                font-size: 1rem;
+            }
+        }
+        .foto {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+        }
+    }
+    .classificacao{
+        position: relative;
+        z-index: 1;
+        .titulo{
+            font-size: 2rem;
+        }
+        .subtitulo{
+            font-size: 1.1rem;
+        }
+    }
 }
 
-/* coisas da section da imagem do drone */
-.imagem{
-    height: 435px;
+/* COISAS DA SECTION DEPOIMENTOS PARA TELAS MAIORES QUE CELULAR */
+@media(min-width: 768px){
+    .depoimentos {
+        position: relative;
+        height: 25rem;
+        width: 100%;
+        background-image: url(/img/Imagem\ 3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 4rem;
+        color: var(--cor-branca);
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            backdrop-filter: blur(3px);
+            background-color: rgba(0,0,0,0.3);
+            z-index: 0;
+        }
+        .depoimentofoto {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 4rem;
+            .depoimento {
+                .titulo {
+                    font-family: var(--fonte-principal);
+                    font-size: 1.7rem;
+                }
+                .fala {
+                    width: 25rem;
+                    text-align: start;
+                    font-family: var(--fonte-principal);
+                    font-size: 1rem;
+                }
+                .nome {
+                    font-family: var(--fonte-principal);
+                    font-weight: 200;
+                    font-size: 1rem;
+                }
+            }
+            .foto {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 4px solid #fff;
+            }
+        }
+        .classificacao{
+            position: relative;
+            z-index: 1;
+            .titulo{
+                font-size: 2rem;
+            }
+            .subtitulo{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+/* COISAS DA SECTION FORMULÁRIO MOBILE FIRST */
+.agendamento{
+    height: min-content;
     width: 100%;
-    background-image: url(/img/Imagem\ 2.png);
+    background-color: var(--cor-fundo);
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    .textos{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        font-family: var(--fonte-principal);
+        color: var(--cor-branca);
+        .titulo{
+            margin-top: 1rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .subtitulo{
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .paragrafo{
+            width: 24rem;
+            font-size: 1rem;
+            margin-bottom:1rem ;
+            font-weight: 300;
+        }
+        .contatos{
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+    .formulario{
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        width: 25rem;
+        label{
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: #333;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        input:focus{
+            outline: none;
+            border-color: #2ecc71;
+            box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+        }
+        button{
+            width: 100%;
+            padding: 12px;
+            background: #2ecc71;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button::hover{
+            background: #27ae60;
+        }
+    }
+}
+/* COISAS DA SECTION FORMULÁRIO PARA TELAS MAIORES QUE CELULAR */
+@media(min-width: 768px){
+    .agendamento{
+        height: 25rem;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10rem;
+        .textos{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            font-family: var(--fonte-principal);
+            color: var(--cor-branca);
+            .titulo{
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            .subtitulo{
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            .paragrafo{
+                width: 23rem;
+                font-size: 1rem;
+                margin-bottom:1rem ;
+                font-weight: 300;
+            }
+            .contatos{
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+        .formulario{
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            width: 40rem;
+            label{
+                display: block;
+                font-size: 0.9rem;
+                margin-bottom: 0.3rem;
+                color: #333;
+            }
+            input{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 0.9rem;
+            }
+            input:focus{
+                outline: none;
+                border-color: #2ecc71;
+                box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+            }
+            button{
+                width: 100%;
+                padding: 12px;
+                background: #2ecc71;
+                color: #fff;
+                font-size: 0.9rem;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            button::hover{
+                background: #27ae60;
+            }
+        }
+    }
 }
