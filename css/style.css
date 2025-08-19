@@ -284,7 +284,7 @@ header{
             font-family: var(--fonte-principal);
             .titulo{
                 text-align: center;
-                width: 30rem;
+                width: 25rem;
                 font-size: 1.5rem;
                 font-weight: var(--largura-fonte);
                 color: var(--cor-branca);
