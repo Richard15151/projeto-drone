@@ -33,6 +33,7 @@ body{
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+    padding: 0.01rem;
 }
 
 html {
@@ -384,12 +385,17 @@ header{
 
 /* COISAS DA SECTION IMAGEM MOBILE FIRST */
 .imagem {
+    height: 15rem;
     width: 100%;
     height: 15rem;
-    background-image: url(/img/Imagem\ 2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 /* COISAS DA SECTION DA IMAGEM PARA TELAS MAIORES QUE CELULAR */
@@ -454,7 +460,7 @@ header{
             flex-wrap: wrap;
             gap: 0.1rem;
             .card{
-                width: 28rem;
+                width: 31.6rem;
                 height: 12.4rem;
                 display: flex;
                 justify-content:center;
