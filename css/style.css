@@ -177,7 +177,7 @@ header{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 26rem;
+                width: 22rem;
                 font-family: var(--fonte-principal);
                 font-size: 24px;
             }
@@ -399,7 +399,7 @@ header{
                     transition: all 0.3s ease;
                 }
                 .botaoassistir{
-                    width: 4rem;
+                    width: 8rem;
                     background: #fff;
                     color: #000;
                     border: 2px solid #fff;
