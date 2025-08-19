@@ -35,6 +35,9 @@ body{
     flex-direction: column;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* HEADER MOBILE FIRST */
 
 header{
@@ -44,6 +47,9 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-between;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 
     .titulo{
         font-family: var(--fonte-principal);
